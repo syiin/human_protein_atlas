@@ -1,21 +1,14 @@
 # Human Protein Atlas Challenge
 
-Managed to finish in the Top 12%
+This is an implementation and application of the SENet-154 neural network architecture (https://arxiv.org/pdf/1709.01507.pdf) to the Human Protein Atlas Challenge dataset on Kaggle. 
 
-The various iterations and notes along the way to create a convolutional neural network that to recognise proteins found on microscopy staining images. 
+Performance on the leaderboard: Top 12% (234/2172)
 
-Used the FastAI library to get started quickly as well as the pretrained models: https://github.com/Cadene/pretrained-models.pytorch.
+This is a record of the various iterations and experiments I conducted along the way to create a convolutional neural network that to recognise proteins found on microscopy staining images. 
 
-Things done well:
-1. Pulled together the minimum needed quickly to start iterating and experimenting. 
-2. Held 1st place for sometime in the earlier months 
-3. Managed to try a range of fancier techniques like the 1-cycle training policy, cosine annealing...etc
+Used the FastAI library as well as the pretrained models from: https://github.com/Cadene/pretrained-models.pytorch.
 
-Things not done so well:
-1. The larger SENet-154 architecture being trained at the later notebooks did not outperform the smaller simpler networks
-2. Did not use the extra leaked data - insufficient hard drive space
-3. Could have experimented more with oversampling
-
-Considered leaving the trained models out of the repo but figured perhaps someone using either ResNext50 or SENet-154 may one day find these useful. 
-
-WARNING: this is obviously not very tidy organised Jupyter notebook but I completed this project in spare time in the evenings. While some notes are maintained here, I kept most notes on a hand written book so it may be confusing to follow the train of thought. 
+If you are considering using some of this code, things to note:
+1. I used tabbed views to retain results of previous experiments - this means that trying to read the notebooks in order may be confusing
+2. The code using the FastAI library is likely to be out of date (I used v0.7 whereas v1.0 has been launched)
+3. The one-cycle policy did not seem to work well and I had trouble tuning the hyperparameters as recommended (https://sgugger.github.io/the-1cycle-policy.html)  
